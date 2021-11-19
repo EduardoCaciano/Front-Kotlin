@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:circularflow_radiusInDP="25dp"
+    android:background="@color/secundaria">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dog"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <EditText
+            android:id="@+id/ed_password"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text"
+            android:hint="Senha"
+            android:inputType="numberPassword"
+            android:maxLength="60"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/ed_email"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/ed_email"
+            app:layout_constraintTop_toBottomOf="@+id/ed_email" />
+
+        <EditText
+            android:id="@+id/ed_email"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="190dp"
+            android:background="@drawable/edit_text"
+            android:drawablePadding="16dp"
+            android:hapticFeedbackEnabled="true"
+            android:hint="E-mail"
+            android:inputType="textWebEmailAddress"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_password"
+
+            android:padding="12dp"
+            android:text="Entrar"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:backgroundTint="#D28224"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/ed_password"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ed_password"
+            app:layout_constraintTop_toBottomOf="@+id/ed_password"
+            app:layout_constraintVertical_bias="0.163" />
+
+
+        <TextView
+            android:id="@+id/ed_criar_conta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Criar conta"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#9A2196F3"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/btn_login"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
+            tools:ignore="MissingConstraints" />
+
+        <CheckBox
+            android:id="@+id/check_lembrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_login"
+            android:layout_marginStart="75dp"
+            android:text="Lembrar senha"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_criar_conta"
+            app:layout_constraintEnd_toEndOf="@+id/btn_login"
+            app:layout_constraintStart_toEndOf="@+id/ed_criar_conta"
+            app:layout_constraintTop_toTopOf="@+id/ed_criar_conta"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/esqueceu_senha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:text="Esqueceu a senha?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_login"
+            app:layout_constraintStart_toStartOf="@+id/ed_criar_conta"
+            app:layout_constraintTop_toBottomOf="@+id/ed_criar_conta"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView10"
+            android:layout_width="336dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="22dp"
+            app:cardBackgroundColor="#00C8C7C7"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/esqueceu_senha"
+            app:layout_constraintStart_toStartOf="@+id/esqueceu_senha"
+            app:layout_constraintTop_toBottomOf="@+id/esqueceu_senha">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/facebook"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/logofacebook"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Entrar com Facebook"
+                    android:textColor="#3b3b3b"
+
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="336dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="#00392A2A"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView10"
+            app:layout_constraintStart_toStartOf="@+id/cardView10"
+            app:layout_constraintTop_toBottomOf="@+id/cardView10">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/google"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/logogoogle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Entrar com Google"
+                    android:textColor="#3b3b3b"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
